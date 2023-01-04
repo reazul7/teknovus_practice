@@ -27,7 +27,7 @@ function ContactList() {
           </tr>
         </thead>
         <tbody>
-          {contacts.map((contact) => (
+          {contacts.sort((a,b) => (a.name < b.name ? -1 : 1)).map((contact) => (
             <tr key={contact.id}>
               <Contact contact={contact} />
             </tr>
